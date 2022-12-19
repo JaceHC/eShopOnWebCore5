@@ -9,6 +9,7 @@ namespace Microsoft.eShopWeb.ApplicationCore.Entities
         public string Name { get; private set; }
         public string Description { get; private set; }
         public decimal Price { get; private set; }
+        public string Color { get; private set; }
         public string PictureUri { get; private set; }
         public int CatalogTypeId { get; private set; }
         public CatalogType CatalogType { get; private set; }
@@ -20,7 +21,8 @@ namespace Microsoft.eShopWeb.ApplicationCore.Entities
             string description,
             string name,
             decimal price,
-            string pictureUri)
+            string pictureUri,
+            string color)
         {
             CatalogTypeId = catalogTypeId;
             CatalogBrandId = catalogBrandId;
@@ -28,6 +30,7 @@ namespace Microsoft.eShopWeb.ApplicationCore.Entities
             Name = name;
             Price = price;
             PictureUri = pictureUri;
+            Color = color;
         }
 
         public void UpdateDetails(string name, string description, decimal price)
